@@ -1,0 +1,39 @@
+{% extends "layout.html" %} 
+{% block content %}
+
+    <h1>Welcome to Resume Generator</h1>
+    <br>
+    <p></p>
+
+    <div>
+        <article class="container">
+            <p class="article-content">Welcome to Resume Builder</p>
+            <p class="article-content">Create your resume easily through this magic builder. </p>
+        </article>
+
+        {% if current_user.is_authenticated %}
+        <br>
+        <a href="/resume/new" class="btn btn-outline-danger" style="float: left;">Create Resume</a>
+        
+
+        
+        
+
+
+        
+        {% else %}
+        <a href="/login" class="btn btn-outline-success" style="float: left;">Login to Continue</a>
+        <a href="/register" class="btn btn-outline-info" style="float: right;">Register Here </a>
+        
+        
+        {% endif %}
+        
+    </div>
+   
+
+
+
+{% endblock content %}
+
+
+    
